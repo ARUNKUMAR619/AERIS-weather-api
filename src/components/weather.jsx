@@ -58,7 +58,7 @@ function Weather() {
       <div className="absolute w-72 h-72 sm:w-[360px] sm:h-[360px] md:w-[400px] md:h-[400px] bg-fuchsia-500/20 rounded-full blur-[100px] sm:blur-[130px] md:blur-[150px] bottom-[-100px] right-[-140px] sm:right-[-100px] animate-pulse"></div>
 
 
-      <div className="relative w-full max-w-6xl border border-white/10 bg-white/5 backdrop-blur-3xl rounded-3xl sm:rounded-[40px] p-4 sm:p-6 md:p-8 shadow-2xl">
+      <div className="relative w-full max-w-6xl border border-white/10 bg-black/20 rounded-3xl sm:rounded-[40px] p-4 sm:p-6 md:p-8 shadow-2xl">
 
         <div className="flex flex-col gap-5 sm:flex-row sm:justify-between sm:items-center border-b border-white/10 pb-5 sm:pb-6">
           <div className="min-w-0">
@@ -107,7 +107,7 @@ function Weather() {
 
         <div className="grid lg:grid-cols-3 gap-5 sm:gap-6 mt-7 sm:mt-10">
 
-          <div className="lg:col-span-2 bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl sm:rounded-[35px] p-5 sm:p-6 md:p-8 relative overflow-hidden">
+          <div className="lg:col-span-2 bg-black/20 border border-white/10 rounded-3xl sm:rounded-[35px] p-5 sm:p-6 md:p-8 relative overflow-hidden">
             <div className="absolute w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl top-[-40px] right-[-40px]"></div>
 
             <p className="uppercase tracking-[3px] sm:tracking-[6px] text-slate-500 text-xs sm:text-sm">
@@ -138,7 +138,7 @@ function Weather() {
 
 
               <div className="mt-2 md:mt-0 flex justify-center md:justify-end shrink-0">
-                <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-5xl sm:text-6xl md:text-7xl backdrop-blur-2xl animate-pulse">
+                <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full border border-white/10 bg-black/20 flex items-center justify-center text-5xl sm:text-6xl md:text-7xl animate-pulse">
                   {weather === "Clouds"
                     ? "☁️"
                     : weather === "Rain"
@@ -155,7 +155,7 @@ function Weather() {
 
           <div className="space-y-5 sm:space-y-6">
 
-            <div className="bg-white/5 border border-white/10 rounded-3xl sm:rounded-[30px] p-5 sm:p-6 hover:translate-y-[-5px] transition-all duration-300">
+            <div className="bg-black/20 border border-white/10 rounded-3xl sm:rounded-[30px] p-5 sm:p-6 hover:translate-y-[-5px] transition-all duration-300">
               <p className="text-slate-500 uppercase tracking-[3px] sm:tracking-[4px] text-xs sm:text-sm">
                 Humidity
               </p>
@@ -171,7 +171,7 @@ function Weather() {
             </div>
 
 
-            <div className="bg-white/5 border border-white/10 rounded-3xl sm:rounded-[30px] p-5 sm:p-6 hover:translate-y-[-5px] transition-all duration-300">
+            <div className="bg-black/20 border border-white/10 rounded-3xl sm:rounded-[30px] p-5 sm:p-6 hover:translate-y-[-5px] transition-all duration-300">
               <p className="text-slate-500 uppercase tracking-[3px] sm:tracking-[4px] text-xs sm:text-sm">
                 Wind Velocity
               </p>
@@ -184,7 +184,7 @@ function Weather() {
         </div>
 
 
-        <div className="mt-6 sm:mt-8 border border-white/10 rounded-3xl sm:rounded-[30px] p-5 sm:p-6 bg-white/5 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+        <div className="mt-6 sm:mt-8 border border-white/10 rounded-3xl sm:rounded-[30px] p-5 sm:p-6 bg-black/20 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
           <div className="min-w-0">
             <p className="text-slate-500 uppercase tracking-[3px] sm:tracking-[5px] text-xs sm:text-sm">
               Atmospheric Status
