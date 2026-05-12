@@ -5,6 +5,9 @@ A futuristic weather application built using React, Tailwind CSS, Axios, and the
 AERYX provides real-time weather updates with a cinematic atmospheric interface inspired by futuristic AI systems and sci-fi dashboards.
 
 ---
+## Live Demo
+
+Link:https://aeris-weather-api.vercel.app/
 
 ## Features
 
