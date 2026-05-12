@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 function Weather() {
+  const apiKey = process.env.REACT_APP_API_KEY;
   const [city, setcity] = useState("");
   const [weather, setWeather] = useState("");
   const [temp, setTemp] = useState("");
@@ -16,7 +17,7 @@ function Weather() {
 
   function getWeather() {
     var weatherData = axios(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=61779e6a3208fe4b2a45a4ca76e8863b&units=metric`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`,
     );
 
     weatherData
