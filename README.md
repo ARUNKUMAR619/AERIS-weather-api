@@ -1,70 +1,157 @@
-# Getting Started with Create React App
+# AERIS ☁️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A futuristic weather application built using React, Tailwind CSS, Axios, and the OpenWeather API.
 
-## Available Scripts
+AERYX provides real-time weather updates with a cinematic atmospheric interface inspired by futuristic AI systems and sci-fi dashboards.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Real-time weather search
+- Dynamic local city time
+- Temperature, humidity, and wind data
+- Responsive futuristic UI
+- Glassmorphism design
+- Animated atmospheric effects
+- Error handling for invalid cities
+- Quick city search pills
+- Dynamic weather condition icons
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- Tailwind CSS
+- Axios
+- OpenWeather API
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### OpenWeather API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Used to fetch:
+- Weather conditions
+- Temperature
+- Humidity
+- Wind speed
+- Timezone offset
 
-### `npm run eject`
+API Endpoint:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=API_KEY&units=metric
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Techniques Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### React Hooks
 
-## Learn More
+Used `useState()` for:
+- City input
+- Weather data
+- Temperature
+- Description
+- Humidity
+- Wind speed
+- Local city time
+- Error handling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### API Fetching with Axios
 
-### Code Splitting
+```js
+axios(url)
+  .then(function (Success) {
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  })
 
-### Analyzing the Bundle Size
+  .catch(function (err) {
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  })
+```
 
-### Making a Progressive Web App
+Used:
+- Promise handling
+- API response handling
+- Error handling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+### Dynamic Local Time Calculation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Generated local time dynamically using:
+- OpenWeather timezone offset
+- UTC conversion
+- JavaScript Date methods
 
-### Deployment
+```js
+const utcMs =
+  Date.now() + new Date().getTimezoneOffset() * 60000;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+setLocalTime(
+  new Date(
+    utcMs + Success.data.timezone * 1000
+  ).toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  })
+);
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Conditional Rendering
+
+Used conditional rendering for:
+- Error messages
+- Empty states
+- Dynamic weather icons
+
+---
+
+### Tailwind CSS Styling
+
+Used:
+- Flexbox
+- Grid layouts
+- Backdrop blur
+- Glassmorphism
+- Gradients
+- Hover animations
+- Responsive design
+- Transition effects
+- Typography customization
+
+---
+
+## UI Design Inspiration
+
+Inspired by:
+- Futuristic AI systems
+- Atmospheric dashboards
+- Sci-fi operating systems
+- Cyberpunk interface aesthetics
+
+---
+
+## Future Improvements
+
+- 5-day forecast
+- Sunrise and sunset data
+- Weather-based animated backgrounds
+- Geolocation support
+- Search history
+- Live weather transitions
+
+---
+
+## Author
+
+Arun Kumar K
