@@ -121,7 +121,7 @@ function Weather() {
             <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
               <div className="min-w-0">
                 <h1 className="text-6xl sm:text-[80px] md:text-[110px] leading-none font-black tracking-tight break-words">
-                  {temp}°
+                  {temp}°C
                 </h1>
 
                 <p className="text-2xl sm:text-3xl text-cyan-300 font-semibold mt-4 break-words">
