@@ -151,7 +151,13 @@ function Weather() {
                         ? "☀️"
                         : weather === "Thunderstorm"
                           ? "⛈️"
-                          : "🌍"}
+                          : weather === "Fog" ||
+                              weather === "Haze" ||
+                              weather === "Mist"
+                            ? "🌫️"
+                            : weather === "Snow"
+                              ? "❄️"
+                              : "🌍"}
                 </div>
               </div>
             </div>
